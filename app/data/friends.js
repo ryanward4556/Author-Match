@@ -1,7 +1,8 @@
+
 const friends = [
     {
         "name": "Robertson",
-        "photo": "https://www.integraconference.info/wp-content/uploads/2018/03/placeholder-face-big.png",
+        "photo": "https://images.gr-assets.com/authors/1225671081p5/23129.jpg",
         "scores": [
             5,
             1,
@@ -17,7 +18,7 @@ const friends = [
     },
     {
         "name": "Gabriel",
-        "photo": "https://www.integraconference.info/wp-content/uploads/2018/03/placeholder-face-big.png",
+        "photo": "https://www.escritores.org/imag/gabrielgarciamarquez12.jpg",
         "scores": [
             5,
             1,
@@ -33,7 +34,7 @@ const friends = [
     },
     {
         "name": "Kurt",
-        "photo": "https://www.integraconference.info/wp-content/uploads/2018/03/placeholder-face-big.png",
+        "photo": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Kurt_Vonnegut_1972.jpg",
         "scores": [
             5,
             4,
@@ -49,7 +50,7 @@ const friends = [
     },
     {
         "name": "Ernest",
-        "photo": "https://www.integraconference.info/wp-content/uploads/2018/03/placeholder-face-big.png",
+        "photo": "http://www.steinbecknow.com/wp-content/uploads/2019/05/ernest-hemmingway-yousuf-karsh.jpg",
         "scores": [
             1,
             4,
@@ -65,7 +66,7 @@ const friends = [
     },
     {
         "name": "Gertrude",
-        "photo": "https://image.shutterstock.com/image-vector/placeholder-avatar-female-person-default-260nw-362901368.jpg",
+        "photo": "https://anotherimg-dazedgroup.netdna-ssl.com/640/azure/another-prod/360/8/368220.jpg",
         "scores": [
             3,
             1,
@@ -79,4 +80,8 @@ const friends = [
             4
         ]
     }
-]
+];
+
+
+
+module.exports = friends;
