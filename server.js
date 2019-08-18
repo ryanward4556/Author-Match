@@ -1,22 +1,27 @@
 // Dependencies
 // =============================================================
-const express = require("express");
-const path = require("path");
+var express = require("express");
+var path = require("path");
 
 // Sets up the Express App
 // =============================================================
-const app = express();
-const PORT = 3000;
+var app = module.exports = express();
+var PORT = 3000;
+
+var htmlRoutes = require("./app/routing/htmlRoutes")
 
 // Sets up the Express app to handle data parsing
-app.use(express.urlencoded({
-    extended: true
-}));
+app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static('./app/data/friends.js'))
+app.use(express.static('public'))
+
+// module.exports = app;
+app.use(htmlRoutes);
 
 // Starts the server to begin listening
 // =============================================================
 app.listen(PORT, function () {
     console.log("App listening on http://localhost:" + PORT);
 });
+
+
