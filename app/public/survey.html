@@ -259,11 +259,53 @@
                 };
 
                 $.post("/api/friends", userData, function (data) {
+                    // console.log(data);
+                });
+                $.get("/api/friends", function (data) {
+                    console.log(data);
+                    //  Logic to find a friend
+                    // Convert each user's results into a simple array of numbers (ex: [5, 1, 4, 4, 5, 1, 2, 5, 4, 1]).
+                    const totalScores = [];
+                    const totalDifferences = [];
+                    for (let i = 0; i < data.length; i++) {
+                        totalScores.push(data[i].scores);
+                    }
+
+                    const newUser = totalScores[totalScores.length - 1];
+
+                    for (let i = 0; i < (totalScores.length - 1); i++) {
+                        const indexDifferences = [];
+                        for (let j = 0; j < 10; j++) {
+                            let indexDiff = (newUser[j] - totalScores[i][j]);
+                            if (indexDiff < 0) {
+                                indexDiff *= -1;
+                            }
+                            // fruits.splice(2, 0, "Lemon", "Kiwi");
+                            indexDifferences.splice(0,0, indexDiff);
+                            // console.log("indexDiff j loop: " + indexDifferences);
+                        }
+                        totalDifferences.push(indexDifferences);
+                        console.log("indexDiff i loop: " + typeof(indexDifferences));
+                    }
+
+                    console.log("totalScores: " + totalScores);
+                    console.log("totalDiffereces: " + totalDifferences);
+
+
+                    // With that done, compare the difference between current user's scores against those from other users, 
+                    // question by question. Add up the differences to calculate the totalDifference.
+
+                    // Example:
+                    // User 1: [5, 1, 4, 4, 5, 1, 2, 5, 4, 1]
+                    // User 2: [3, 2, 6, 4, 5, 1, 2, 5, 4, 1]
+                    // Total Difference: 2 + 1 + 2 = 5
+
+                    // Remember to use the absolute value of the differences. Put another way: no negative solutions! 
+                    // Your app should calculate both 5-3 and 3-5 as 2, and so on.
+                    // The closest match will be the user with the least amount of difference.
                     $("#match-name").text(data.name);
                     $("#match-img").attr("src", data.photo);
-
                     $("#results-modal").modal("toggle");
-
                 });
             } else {
                 alert("Please fill out all fields before submitting!");
