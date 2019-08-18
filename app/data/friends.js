@@ -1,4 +1,7 @@
 
+// var newFriends = [require("../routing/apiRoutes")];
+
+
 const friends = [
     {
         "name": "Robertson",

@@ -12,10 +12,14 @@ app.post("/api/friends", function (req, res) {
     // req.body hosts is equal to the JSON post sent from the user
     // This works because of our body parsing middleware
     var newFriend = req.body;
-    console.log(newFriend);
-
+    for (let i = 0; i < 10; i++) {
+        newFriend.scores[i] = parseInt(newFriend.scores[i]);
+    }
     friendsList.push(newFriend);
     res.json(newFriend);
+    console.log("friendsList: " + friendsList);
+    console.log("newFriend: " + newFriend);
+
 });
 
 // A GET route with the url /api/friends. This will be used to display a JSON of all possible friends.
