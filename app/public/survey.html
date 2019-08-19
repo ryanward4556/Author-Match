@@ -262,7 +262,6 @@
                     // console.log(data);
                 });
                 $.get("/api/friends", function (data) {
-                    console.log(data);
                     //  Logic to find a friend
                     // Convert each user's results into a simple array of numbers (ex: [5, 1, 4, 4, 5, 1, 2, 5, 4, 1]).
                     const totalScores = [];
@@ -272,25 +271,29 @@
                     }
 
                     const newUser = totalScores[totalScores.length - 1];
-
+                    let max = 0;
+                    let indexOfMax;
                     for (let i = 0; i < (totalScores.length - 1); i++) {
-                        const indexDifferences = [];
+                        let indexTotal = 0;
+                        // const indexDifferences = [];
                         for (let j = 0; j < 10; j++) {
                             let indexDiff = (newUser[j] - totalScores[i][j]);
                             if (indexDiff < 0) {
                                 indexDiff *= -1;
                             }
-                            // fruits.splice(2, 0, "Lemon", "Kiwi");
-                            indexDifferences.splice(0,0, indexDiff);
-                            // console.log("indexDiff j loop: " + indexDifferences);
+                            indexTotal += indexDiff;
                         }
-                        totalDifferences.push(indexDifferences);
-                        console.log("indexDiff i loop: " + typeof(indexDifferences));
+                        totalDifferences.splice(0,0, indexTotal);
+                        max = Math.max(...totalDifferences);
+                        if (max = totalDifferences[i]) {
+                            indexOfMax = i;
+                        }
                     }
-
-                    console.log("totalScores: " + totalScores);
-                    console.log("totalDiffereces: " + totalDifferences);
-
+                    console.log(totalDifferences);
+                    console.log(max);
+                    console.log(indexOfMax);
+                    console.log(data[indexOfMax]);
+                    
 
                     // With that done, compare the difference between current user's scores against those from other users, 
                     // question by question. Add up the differences to calculate the totalDifference.
