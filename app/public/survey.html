@@ -271,8 +271,8 @@
                     }
 
                     const newUser = totalScores[totalScores.length - 1];
-                    let max = 0;
-                    let indexOfMax;
+                    let min = 0;
+                    let indexOfMin;
                     for (let i = 0; i < (totalScores.length - 1); i++) {
                         let indexTotal = 0;
                         // const indexDifferences = [];
@@ -284,15 +284,16 @@
                             indexTotal += indexDiff;
                         }
                         totalDifferences.splice(0,0, indexTotal);
-                        max = Math.max(...totalDifferences);
-                        if (max = totalDifferences[i]) {
-                            indexOfMax = i;
+                        min = Math.min(...totalDifferences);
+                        console.log(min);
+                        if (min === totalDifferences[i]) {
+                            indexOfMin = i;
                         }
                     }
                     console.log(totalDifferences);
-                    console.log(max);
-                    console.log(indexOfMax);
-                    console.log(data[indexOfMax]);
+                    console.log(min);
+                    console.log(indexOfMin);
+                    console.log(data[indexOfMin]);
                     
 
                     // With that done, compare the difference between current user's scores against those from other users, 
