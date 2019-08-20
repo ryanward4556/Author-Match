@@ -15,7 +15,9 @@ var friends = require("./app/data/friends");
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-app.use(express.static('public'))
+// app.use(express.static('public'))
+app.use(express.static(__dirname + '/public'));
+
 
 // module.exports = app;
 app.use(htmlRoutes);
