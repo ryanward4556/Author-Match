@@ -20,7 +20,6 @@ Each search displays relevant information for the searched item and is added to 
 ### Technologies Used: 
 * Node.js
 * JavaScript
-* Moment.js
 * Express.js
 * Path (npm package)
 
