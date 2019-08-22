@@ -13,16 +13,14 @@
     <!-- My stylesheet -->
     <!-- <link rel="stylesheet" href="./css/style.css" /> -->
     <style>
+        img {
+            width: 200px;
+        }
 
-    img {
-        width: 200px;
-    }
-
-    #results-modal {
-        text-align: center;
-        margin: 0 auto;
-    }
-
+        #results-modal {
+            text-align: center;
+            margin: 0 auto;
+        }
     </style>
 
 </head>
@@ -33,8 +31,6 @@
             <h1 class="text-center"><i class="fa fa-facebook-square" aria-hidden="true"></i><i class="fa fa-fire"
                     aria-hidden="true"></i> Friend Finder</h1>
             <br>
-            <h3 class="text-center">Tinderbook....? Faceder..? Eek, that's definitely not the one</h3>
-            <h5 class="text-center">(we use these questions to find you friends instead of dates)</h5>
         </div>
         <!-- Survey Questions -->
         <div class="row">
@@ -299,7 +295,7 @@
                             }
                             indexTotal += indexDiff;
                         }
-                        totalDifferences.splice(0,0, indexTotal);
+                        totalDifferences.splice(0, 0, indexTotal);
                         min = Math.min(...totalDifferences);
                         if (min === totalDifferences[i]) {
                             indexOfMin = i;
@@ -309,7 +305,7 @@
                     // console.log(min);
                     // console.log(indexOfMin);
                     // console.log(data[indexOfMin]);
-                    
+
                     $("#match-name").text(data[indexOfMin].name);
                     $("#match-img").attr("src", data[indexOfMin].photo);
                     $("#results-modal").modal("toggle");
