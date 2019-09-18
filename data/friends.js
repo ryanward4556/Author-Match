@@ -4,7 +4,7 @@
 
 const friends = [
     {
-        "name": "Robertson",
+        "name": "Robertson Davies",
         "photo": "https://images.gr-assets.com/authors/1225671081p5/23129.jpg",
         "scores": [
             5,
@@ -20,7 +20,7 @@ const friends = [
         ]
     },
     {
-        "name": "Gabriel",
+        "name": "Gabriel Garcia Marquez",
         "photo": "https://www.escritores.org/imag/gabrielgarciamarquez12.jpg",
         "scores": [
             5,
@@ -36,7 +36,7 @@ const friends = [
         ]
     },
     {
-        "name": "Kurt",
+        "name": "Kurt Vonnegut",
         "photo": "https://upload.wikimedia.org/wikipedia/commons/5/5e/Kurt_Vonnegut_1972.jpg",
         "scores": [
             5,
@@ -52,7 +52,7 @@ const friends = [
         ]
     },
     {
-        "name": "Ernest",
+        "name": "Ernest Hemmingway",
         "photo": "http://www.steinbecknow.com/wp-content/uploads/2019/05/ernest-hemmingway-yousuf-karsh.jpg",
         "scores": [
             1,
@@ -68,7 +68,7 @@ const friends = [
         ]
     },
     {
-        "name": "Gertrude",
+        "name": "Gertrude Stein",
         "photo": "https://anotherimg-dazedgroup.netdna-ssl.com/640/azure/another-prod/360/8/368220.jpg",
         "scores": [
             3,

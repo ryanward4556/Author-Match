@@ -14,6 +14,10 @@ body {
     color: maroon;
 }
 
+.modal-content {
+    color: maroon;
+}
+
 img {
     width: 200px;
 }
