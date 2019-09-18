@@ -1,7 +1,7 @@
-# Friend-Finder
+# Author-Match
 
 ## Heroku link: 
-[Friend-Finder](https://quiet-shore-44266.herokuapp.com/)
+[Author-Match](https://quiet-shore-44266.herokuapp.com/)
 
 ## Summary
 

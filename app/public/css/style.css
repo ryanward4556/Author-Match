@@ -1,3 +1,5 @@
-img {
-    widows: 200px;
+body {
+    background-image: url("../img/book.jpg");
+    background-size: cover;
+    background: no-repeat;
 }

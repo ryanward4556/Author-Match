@@ -1,7 +1,6 @@
 // Dependencies
 // =============================================================
 var express = require("express");
-var path = require("path");
 
 // Sets up the Express App
 // =============================================================
@@ -15,8 +14,8 @@ var friends = require("./app/data/friends");
 // Sets up the Express app to handle data parsing
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-// app.use(express.static('public'))
-app.use(express.static(__dirname + '/public'));
+app.use(express.static("public"))
+// app.use(express.static(__dirname + "/public"));
 
 
 // module.exports = app;
