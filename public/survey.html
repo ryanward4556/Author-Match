@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8" />
-    <title>Eatery</title>
+    <title>Author Match</title>
     <!-- Latest compiled and minified CSS & JS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
@@ -11,31 +11,21 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
     <!-- My stylesheet -->
-    <!-- <link rel="stylesheet" href="./css/style.css" /> -->
-    <style>
-        img {
-            width: 200px;
-        }
-
-        #results-modal {
-            text-align: center;
-            margin: 0 auto;
-        }
-    </style>
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
 
 </head>
 
 <body>
     <div class="container">
-        <div class="jumbotron">
-            <h1 class="text-center"><i class="fa fa-facebook-square" aria-hidden="true"></i><i class="fa fa-fire"
-                    aria-hidden="true"></i> Friend Finder</h1>
-            <br>
+        <div class="jumbotron text-center">
+            <h1><span></i><i class="fa fa-book" aria-hidden="true"></i>
+                    Author Match</span></h1>
+            <hr>
         </div>
         <!-- Survey Questions -->
         <div class="row">
             <div class="col-sm-12">
-                <h2><strong>Survey Questions</strong></h2>
+                <h2  id="survey-header"><strong>Survey Questions</strong></h2>
                 <hr>
                 <div class="card">
                     <div class="card-header">
@@ -195,7 +185,7 @@
         <!-- Submit button -->
         <div class="row">
             <div class="col-sm-12">
-                <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit-btn">
+                <button type="submit" class="btn btn-dark btn-lg btn-block" id="submit-btn">
                     <span class="fa fa-fire"></span> Submit
                 </button>
             </div>
@@ -204,21 +194,24 @@
     <hr>
     <footer class="footer mt-auto py-3">
         <div class="container">
-            <a href="/api/friends"><span class="text-muted">API Friend List.</span></a>
+            <a href="/api/authormatch"><span class="text-muted">API Friend List.</span></a>
             <span>|</span>
-            <a href="https://github.com/ryanward4556/Friend-Finder">
+            <a href="https://github.com/ryanward4556/Author-Match">
                 <span class="text-muted">GitHub Repo</span></a>
         </div>
     </footer>
     </div>
 
-    <div id="results-modal" class="modal fade" role="dialog">
-        <div class="modal-dialog">
+    <div id="results-modal" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="results-modal-title"
+        aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered" role="document">
 
             <div class="modal-content">
                 <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal">&times;</button>
-                    <h2 class="modal-title"><strong>Best Match</strong></h2>
+                    <h2 class="modal-title" id="results-modal-title"><strong>Best Match</strong></h2>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
                 </div>
                 <div class="modal-body">
                     <h2 id="match-name"></h2>
