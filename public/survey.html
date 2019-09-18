@@ -11,31 +11,21 @@
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
 
     <!-- My stylesheet -->
-    <link rel="stylesheet" type="text/css" href="/css/style.css" />
-    <!-- <style>
-        img {
-            width: 200px;
-        }
-
-        #results-modal {
-            text-align: center;
-            margin: 0 auto;
-        }
-    </style> -->
+    <link rel="stylesheet" type="text/css" href="./css/style.css" />
 
 </head>
 
 <body>
     <div class="container">
-        <div class="jumbotron">
-            <h1 class="text-center"><i class="fa fa-facebook-square" aria-hidden="true"></i><i class="fa fa-fire"
-                    aria-hidden="true"></i> Friend Finder</h1>
-            <br>
+        <div class="jumbotron text-center">
+            <h1><span></i><i class="fa fa-book" aria-hidden="true"></i>
+                    Author Match</span></h1>
+            <hr>
         </div>
         <!-- Survey Questions -->
         <div class="row">
             <div class="col-sm-12">
-                <h2><strong>Survey Questions</strong></h2>
+                <h2  id="survey-header"><strong>Survey Questions</strong></h2>
                 <hr>
                 <div class="card">
                     <div class="card-header">
@@ -195,7 +185,7 @@
         <!-- Submit button -->
         <div class="row">
             <div class="col-sm-12">
-                <button type="submit" class="btn btn-primary btn-lg btn-block" id="submit-btn">
+                <button type="submit" class="btn btn-dark btn-lg btn-block" id="submit-btn">
                     <span class="fa fa-fire"></span> Submit
                 </button>
             </div>
@@ -220,7 +210,7 @@
                 <div class="modal-header">
                     <h2 class="modal-title" id="results-modal-title"><strong>Best Match</strong></h2>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
+                        <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
