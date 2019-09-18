@@ -14,9 +14,6 @@ This application will help you find out. It is used to see which famous author i
 1. Click on the API Friends List to see the yourself added to the friends list after you submit your survey
     1. utilizes routing to render the full list of friends on the page (by simulating hard coded API data)
 
-
-Each search displays relevant information for the searched item and is added to the searches.txt file. 
-
 ### Technologies Used: 
 * Node.js
 * JavaScript
